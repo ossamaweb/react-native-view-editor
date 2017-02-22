@@ -382,12 +382,14 @@ export class ViewEditor extends Component {
     const imageAbove = this.currentPanValue.y + heightDiff + maskPaddingDiffY;
     const additionalWidth = (imageWidth - withScale * imageWidth) / 2;
     const additionalHeight = (imageHeight - withScale * imageHeight) / 2;
+    /**
     if (this.currentPanValue.x > maskPaddingDiffX - additionalWidth) {
       positionUpdate.x = -this.currentPanValue.x - additionalWidth + maskPaddingDiffX;
     }
     if (this.currentPanValue.y > maskPaddingDiffY - additionalHeight) {
       positionUpdate.y = -this.currentPanValue.y - additionalHeight + maskPaddingDiffY;
     }
+    **/
     if (imageAbove < -additionalHeight) {
       positionUpdate.y = -imageAbove - additionalHeight;
     }
